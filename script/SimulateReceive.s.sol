@@ -16,8 +16,8 @@ contract SimulateReceive is Script {
 
        function run() public {
         // -- New mainnet/testnet toggle added here --
-        bool mainnet = true; // Set to false for testnet
-        string memory txHash = "0x88a79d59222628aba22c5c616580212c80beae353aaa8ffbd3976dd5aa5d12f8";
+        bool mainnet = false; // Set to false for testnet
+        string memory sourceChainTXHash = "0xdf1225cb2d3f69454ab6ac94784d80a21fc777206c0417c2d1df43182cfc796f";
 
         string[] memory curlCommand = new string[](5);
         curlCommand[0] = "curl";
@@ -28,7 +28,7 @@ contract SimulateReceive is Script {
             "https://scan.layerzero-api.com" :    // Mainnet
             "https://scan-testnet.layerzero-api.com", // Testnet
             "/v1/messages/tx/", 
-            txHash
+            sourceChainTXHash
         ));
         curlCommand[4] = "-H 'accept: application/json'";
 
