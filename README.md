@@ -9,6 +9,7 @@ forge build
 2. Paste the transaction hash into `string memory sourceChainTXHash = "0x0c61c4db115f57b2fba78df78879f9e8230e67d75e78ac2782a3b4c929b5d12f";` in [script/SimulateReceive.s.sol](./script/SimulateReceive.s.sol) and set the mainnet boolean to `true` or `false` (for the scan API)
 4. Run: `forge script script/SimulateReceive.s.sol --rpc-url YOUR_DESTINATION_CHAIN_RPC_URL`
 5. (Optional) Add `--broadcast` and `--private-key YOUR_PRIVATE_KEY` or `--account <CAST_WALLET>` to broadcast the transaction to the destination chain
+6. (Optional) If you want this to be super easy, you can use `.env` along with the recipes in the Makefile
 
 If you get an error from SimulateReceive script eg. `script failed: custom error 7182306f` you can do:
 
