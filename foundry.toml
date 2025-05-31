@@ -16,6 +16,7 @@ libs = [
     'node_modules/@layerzerolabs/toolbox-foundry/lib',
     'node_modules',
 ]
+evm_version = 'shanghai'
 
 remappings = [
     # Due to a misconfiguration of solidity-bytes-utils, an outdated version
